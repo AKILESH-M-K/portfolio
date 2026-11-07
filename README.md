@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Akilesh M K — Software Engineering & Cybersecurity Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![CI Pipeline](https://github.com/AKILESH-M-K/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/AKILESH-M-K/portfolio/actions/workflows/ci.yml)
+[![Live Deployment](https://img.shields.io/badge/Live_Site-GitHub_Pages-blue?style=flat-square)](https://akilesh-m-k.github.io/portfolio/)
+[![WCAG 2.2 AA](https://img.shields.io/badge/Accessibility-WCAG_2.2_AA-emerald?style=flat-square)](https://www.w3.org/WAI/standards-guidelines/wcag/)
+[![Security Hardened](https://img.shields.io/badge/Security-CSP_Hardened-purple?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
 
-## Available Scripts
+A production-engineered personal portfolio website engineered by **Akilesh M K** — B.E. Computer Science and Engineering (Cybersecurity) student at Sri Shakthi Institute of Engineering and Technology.
 
-In the project directory, you can run:
+* **Primary Career Objective:** Software Development Engineer (SDE)
+* **Secondary Specialization:** Application & Systems Security
+* **Live Deployment:** [https://akilesh-m-k.github.io/portfolio/](https://akilesh-m-k.github.io/portfolio/)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Key Engineering & Architectural Highlights
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Modern React Architecture:** Component-based UI with decoupled design tokens, persistent theme state, and zero DOM manipulation leaks.
+* **WCAG 2.2 AA Accessibility Compliance:** Includes keyboard navigation, visible `:focus-visible` rings, screen-reader landmarks (`<main>`, `<header>`, `<nav>`), `<label>`-bound form controls, and `@media (prefers-reduced-motion)` overrides.
+* **High-Performance Hardware Acceleration:** Fluid 60 FPS 3D parallax cards via `react-parallax-tilt` and GPU-accelerated pointer tracking throttled via `requestAnimationFrame` with native touch fallbacks.
+* **Application Security & Hardening:**
+  * Enforced client-side **Content-Security-Policy (CSP)** limiting script, style, and API connect origins.
+  * Strict `Referrer-Policy: strict-origin-when-cross-origin`.
+  * Outbound links protected with `rel="noopener noreferrer"`.
+  * Anti-bot honeypot and client-side regex input sanitization on contact submissions.
+* **Persistent Multi-Palette Theming:** Dark, Cyber, Purple, and Light themes persisting to `localStorage` with initial system `prefers-color-scheme` detection.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technology Stack
 
-### `npm run build`
+| Domain | Technologies |
+|---|---|
+| **Frontend Framework** | React 19, React DOM 19 |
+| **Styling & Design** | Tailwind CSS 3.4, PostCSS, Custom CSS Keyframes |
+| **Interactivity & 3D** | `react-parallax-tilt`, Hardware-accelerated CSS transforms |
+| **Testing Harness** | Jest, React Testing Library, `@testing-library/jest-dom` |
+| **DevSecOps & CI/CD** | GitHub Actions (`ci.yml`), GitHub Pages (`gh-pages`) |
+| **Security Principles** | OWASP Top 10 mitigations, CSP meta enforcement, honeypots |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Repository Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+portfolio/
+├── .github/
+│   └── workflows/
+│       └── ci.yml               # Automated CI (lint, test, build, audit)
+├── public/
+│   ├── favicon.ico              # Browser favicon
+│   ├── index.html               # Main HTML with CSP & Open Graph metadata
+│   ├── manifest.json            # Web app manifest metadata
+│   └── robots.txt               # Search engine crawler policies
+├── src/
+│   ├── App.js                   # Application root component
+│   ├── App.test.js              # Unit and integration test suite
+│   ├── index.css                # Tailwind directives, animations & a11y rules
+│   ├── index.js                 # React DOM client entrypoint
+│   ├── portfolio.jsx            # Main interactive portfolio component & theme system
+│   ├── reportWebVitals.js       # Core Web Vitals telemetry
+│   └── setupTests.js            # Jest test environment mocks
+├── package.json                 # Project dependencies & GitHub Pages homepage path
+└── tailwind.config.js           # Tailwind utility scanner configuration
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧪 Local Development & Testing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Prerequisites
+* **Node.js** v18+ or v20+ LTS
+* **npm** v9+
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Setup
+```bash
+# Clone the repository
+git clone https://github.com/AKILESH-M-K/portfolio.git
+cd portfolio
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Install dependencies using the lockfile
+npm ci
+```
 
-## Learn More
+### 3. Development Server
+```bash
+npm start
+# Opens at http://localhost:3000/portfolio
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. Running Automated Tests
+```bash
+# Run Jest and React Testing Library test suites
+npm test -- --watchAll=false
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 5. Production Build
+```bash
+npm run build
+# Compiles optimized production bundle in build/ directory
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔒 Security & Defensive Engineering
 
-### Analyzing the Bundle Size
+* **Content-Security-Policy (CSP):** Configured to prevent cross-site scripting (XSS) and unauthorized resource execution.
+* **No Client Secrets:** No private API keys or credentials exposed in frontend builds.
+* **Input Validation & Sanitization:** All contact inputs are bound to strict length limits and email regex checks.
+* **Automated Auditing:** CI executes `npm audit` to detect known dependency vulnerabilities.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📜 License & Copyright
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Designed and developed by **Akilesh M K**. All rights reserved.
