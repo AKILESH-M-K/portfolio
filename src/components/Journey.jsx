@@ -16,7 +16,7 @@ export default function Journey({ currentTheme }) {
         <div className="relative group">
           <div className="w-4 h-4 rounded-full bg-sky-400 absolute -left-[31px] sm:-left-[39px] top-1 border-4 border-slate-950 shadow-sm"></div>
           <div>
-            <span className="text-xs font-mono text-sky-400 uppercase tracking-wider">2024 – Present · Undergraduate</span>
+            <span className="text-xs font-mono text-sky-400 uppercase tracking-wider">2025 – Present · Undergraduate</span>
             <h3 className={`text-lg font-bold ${currentTheme.pageText} mt-0.5`}>
               B.E. Computer Science and Engineering (Cybersecurity)
             </h3>

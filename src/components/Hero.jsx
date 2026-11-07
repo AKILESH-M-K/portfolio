@@ -9,7 +9,6 @@ const TECH_BADGES = [
   "Tailwind CSS",
   "Linux",
   "Wazuh / Sysmon",
-  "OWASP Top 10",
 ];
 
 export default function Hero({ currentTheme, onNavigate }) {

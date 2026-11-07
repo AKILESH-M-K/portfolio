@@ -65,3 +65,4 @@ export const FEATURED_PROJECTS = [
     demo: "https://akilesh-m-k.github.io/portfolio/",
   },
 ];
+

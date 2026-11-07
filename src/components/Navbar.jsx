@@ -128,3 +128,4 @@ export default function Navbar({ currentTheme, theme, onThemeChange, activeSecti
     </header>
   );
 }
+

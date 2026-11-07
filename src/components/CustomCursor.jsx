@@ -56,3 +56,4 @@ export default function CustomCursor({ currentTheme }) {
     </div>
   );
 }
+
